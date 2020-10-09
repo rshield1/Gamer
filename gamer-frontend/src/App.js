@@ -1,18 +1,17 @@
 import React from 'react';
 import './App.css';
-import { connect } from 'react-redux';
-import fetchGames from './actions/fetchGames'
+import GamesContainer from './containers/GamesContainer';
 
 class App extends React.Component{
 
   componentDidMount() {
-    this.props.fetchGames({type: 'FETCH_GAMES', payload: {name: 'Zelda'}})
+    
   }
 
   render(){
     return (
       <div>
-      <h1>Hello</h1>
+      <GamesContainer />
       </div>
     );
 
@@ -24,4 +23,4 @@ class App extends React.Component{
 //   games: state.games
 // })
 
-export default connect(null, { fetchGames })(App);
+export default App;
