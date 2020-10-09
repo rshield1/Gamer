@@ -13,7 +13,7 @@ class GamesContainer extends Component {
         return (
             <div>
                  <GameInput />
-                 <Games />  
+                 <Games games={this.props.games}/>  
             </div>
         )
     }

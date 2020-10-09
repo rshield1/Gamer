@@ -3,7 +3,8 @@ import React from 'react'
 const Games = (props) => {
     return (
         <div>
-            Games
+        GAMES
+            {props.games.map(game => <h4 key={game.id}>{game.name} - ${game.price}</h4>)}
         </div>
     )
 }
