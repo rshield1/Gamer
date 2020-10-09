@@ -21,7 +21,7 @@ class GameInput extends Component {
 
     handleSubmit = (e) =>{
         e.preventDefault()
-        this.props.addGame()
+        this.props.addGame(this.state)
 
     }
 

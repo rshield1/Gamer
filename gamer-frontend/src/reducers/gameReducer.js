@@ -10,6 +10,13 @@ export default function gameReducer(state = {games: []}, action) {
               //this will return a brand new state
             games: action.payload
           }
+          case 'ADD_GAME':
+            return {
+                //this will return a brand new state
+              ...state,
+              //all the prev games plus the new game
+              games: [...state.games, action.payload]
+            }
   
       default:
         return state
