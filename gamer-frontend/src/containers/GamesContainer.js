@@ -3,6 +3,7 @@ import Games from '../components/Games'
 import GameInput from '../components/GameInput'
 import { connect } from 'react-redux'
 import fetchGames from '../actions/fetchGames'
+import {Route} from 'react-router-dom'
 
 class GamesContainer extends Component {
 
@@ -12,8 +13,8 @@ class GamesContainer extends Component {
     render() {
         return (
             <div>
-                 <GameInput />
-                 <Games games={this.props.games}/>  
+            <Route path='/games/new' component={ GameInput } />
+            <Route exact path='/games' render={() => <Games games={this.props.games}/>} />
             </div>
         )
     }
