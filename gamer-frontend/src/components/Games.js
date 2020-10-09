@@ -1,11 +1,12 @@
 import React from 'react'
+import Game from './Game'
 
 const Games = (props) => {
     return (
         //render each account
         <div>
-        GAMES
-            {props.games.map(game => <h4 key={game.id}>{game.name} - ${game.price}</h4>)}
+        
+            {props.games.map(game => <h4 key={game.id}><Game game={game}/></h4>)}
         </div>
     )
 }

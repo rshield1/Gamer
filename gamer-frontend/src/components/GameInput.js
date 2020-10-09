@@ -22,6 +22,11 @@ class GameInput extends Component {
     handleSubmit = (e) =>{
         e.preventDefault()
         this.props.addGame(this.state)
+        //reset state
+        this.setState({
+            name: '',
+            price: ''
+        })
 
     }
 
@@ -31,7 +36,7 @@ class GameInput extends Component {
             <div>
               <form onSubmit={this.handleSubmit}>
                 <label>Game name:</label>
-                <input type="text" placeholder="name" value={this.state.name} name="name" onChange={this.handleChange}/>
+                <input type="text" placeholder="Name of Game" value={this.state.name} name="name" onChange={this.handleChange}/>
                 <br/>
                 <label>Game price:</label>
                 <input type="price" placeholder="price" value={this.state.price} name="price" onChange={this.handleChange} />

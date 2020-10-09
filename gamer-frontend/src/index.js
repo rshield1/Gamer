@@ -5,6 +5,7 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import App from './App';
 import gameReducer from './reducers/gameReducer'
+import {BrowserRouter as Router} from 'react-router-dom'
 
 //set up store
 
@@ -16,7 +17,9 @@ window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+  <Router>
+      <App />
+  </Router>
   </Provider>,
   document.getElementById('root')
 );
