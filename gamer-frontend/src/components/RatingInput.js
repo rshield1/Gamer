@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import {connect} from 'react-redux'
+import { addRating } from '../actions/addRating'
 
 class RatingInput extends Component {
     constructor(){
         super()
             this.state = {
-            rating: '',
+            rating: '1',
             description: ''
             }
   
@@ -18,15 +19,23 @@ class RatingInput extends Component {
         })
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault()
+        this.props.addRating(this.state, this.props.id)
+
+    }
+
 
     render() {
         return (
             <div>
              Rating Input - Add a new Rating!!
              <br></br>
-             <form>
+             <form onSubmit={this.handleSubmit}>
                  <label>Rating:</label>
-                 <select name="rating" value={this.state.rating} onChange={this.handleChange}>
+                 <select name="rating" 
+                    value={this.state.rating} 
+                    onChange={this.handleChange}>
                      <option>1</option>
                      <option>2</option>
                      <option>3</option>
@@ -35,7 +44,11 @@ class RatingInput extends Component {
                  </select>
                  <br></br>
                  <label>Description</label>
-                 <input type="text" name="description" value={this.state.description} onChange={this.handleChange}/>
+                 <input type="text" 
+                    name="description" 
+                    value={this.state.description} 
+                    onChange={this.handleChange}/>
+                    <input type="submit" />
              </form>
             </div>
         )
@@ -45,4 +58,4 @@ class RatingInput extends Component {
 
 
 
-export default  connect(null)(RatingInput)
+export default  connect(null, {addRating})(RatingInput)

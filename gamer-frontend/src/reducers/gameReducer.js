@@ -17,6 +17,13 @@ export default function gameReducer(state = {games: []}, action) {
               //all the prev games plus the new game
               games: [...state.games, action.payload]
             }
+            case 'ADD_RATING':
+            return {
+                //this will return a brand new state
+              ...state,
+              //all the prev games plus the new rating
+              games: [...state.games, action.payload]
+            }
   
       default:
         return state
