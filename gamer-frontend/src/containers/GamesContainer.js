@@ -3,7 +3,7 @@ import Games from '../components/Games'
 import GameInput from '../components/GameInput'
 import { connect } from 'react-redux'
 import fetchGames from '../actions/fetchGames'
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom'
 import Game from '../components/Game'
 
 class GamesContainer extends Component {
@@ -14,9 +14,12 @@ class GamesContainer extends Component {
     render() {
         return (
             <div>
-            <Route path='/games/new' component={ GameInput } />
-            <Route path='/games/:id'  render={(...routerProps) => <Game {...routerProps} games={this.props.games}/>} />
-            <Route exact path='/games' render={(...routerProps) => <Games {...routerProps} games={this.props.games}/>} />
+            <Switch>
+                <Route path='/games/new' component={ GameInput } />
+                <Route exact path='/games/:id'  render={(...routerProps) => <Game {...routerProps} games={this.props.games}/>} />
+                <Route exact path='/games' render={(...routerProps) => <Games {...routerProps} games={this.props.games}/>} />
+            </Switch>
+            
             </div>
         )
     }
