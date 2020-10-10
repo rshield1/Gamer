@@ -10,7 +10,7 @@ const Game = (props) => {
        <h2>
         {game ? game.name : null} - {game ? game.price : null}
         </h2>
-        <RatingsContainer />
+        <RatingsContainer game={game}/>
 
         </div>
  
