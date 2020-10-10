@@ -26,6 +26,15 @@ export default function gameReducer(state = {games: []}, action) {
               //all the prev games plus the new rating
               games: [...state.games, action.payload]
             }
+            case 'DELETE_RATING':
+              let games = state.games.map(game => {
+                if (game.id === action.payload.id) {
+                  return action.payload
+                } else {
+                  return game
+                }
+              })
+              return {...state, games: games}
   
       default:
         return state

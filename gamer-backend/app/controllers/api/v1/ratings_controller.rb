@@ -12,7 +12,6 @@ class Api::V1::RatingsController < ApplicationController
     end
 
     def create
-        binding.pry
         @rating = @game.ratings.create(number: params[:rating], description: params[:description])
         @rating.save
         render json: @game
@@ -20,9 +19,13 @@ class Api::V1::RatingsController < ApplicationController
 
     end
 
-    # def destroy 
+    def destroy 
+        @rating = Rating.find(params["id"])
+        @game = Game.find(@rating.game_id)
+        @rating.destroy
+        render json: @game
 
-    # end
+    end
 
     private
 

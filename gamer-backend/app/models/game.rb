@@ -3,6 +3,7 @@ class Game < ApplicationRecord
 
     #validations
     validates :name, presence: true
+    validates :price, presencd: true
 
     #instance method
 

@@ -6,7 +6,7 @@ class RatingInput extends Component {
     constructor(){
         super()
             this.state = {
-            rating: null,
+            rating: '',
             description: ''
             }
   
@@ -23,7 +23,7 @@ class RatingInput extends Component {
         e.preventDefault()
         this.props.addRating(this.state, this.props.game.id)
         this.setState({
-            rating: null,
+            rating: '',
             description: ''
         })
     }
