@@ -5,6 +5,7 @@
 
 export default function gameReducer(state = {games: []}, action) {
   switch (action.type) {
+
       case 'FETCH_GAMES':
           return {
               //this will return a brand new state
@@ -17,6 +18,7 @@ export default function gameReducer(state = {games: []}, action) {
               //all the prev games plus the new game
               games: [...state.games, action.payload]
             }
+            
             case 'ADD_RATING':
             return {
                 //this will return a brand new state

@@ -30,6 +30,6 @@ class Api::V1::RatingsController < ApplicationController
     end
 
     def rating_params
-        params.require(:rating).permit(:game_id, :number, :description)
+        params.require(:rating).permit(:game_id, :rating, :description)
     end
 end

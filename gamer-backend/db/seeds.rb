@@ -6,7 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
+Game.destroy_all
+Rating.destroy_all
 game = Game.create(name: 'Zelda', price: 30.15)
 
-rating = Rating.new(game_id: 1, number: 4.5, description: "Its a good classic")
+rating = Rating.new(game_id: 1, rating: 4, description: "Its a good classic")

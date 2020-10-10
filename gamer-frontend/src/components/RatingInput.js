@@ -6,7 +6,7 @@ class RatingInput extends Component {
     constructor(){
         super()
             this.state = {
-            rating: '1',
+            rating: 1,
             description: ''
             }
   
@@ -21,8 +21,11 @@ class RatingInput extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        this.props.addRating(this.state, this.props.id)
-
+        this.props.addRating(this.state, this.props.game.id)
+        this.setState({
+            rating: 1,
+            description: ''
+        })
     }
 
 
