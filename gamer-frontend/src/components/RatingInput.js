@@ -34,22 +34,34 @@ class RatingInput extends Component {
         return (
             <div>
              Rating Input - Add a new Rating!!
-             <br></br>
-             <form onSubmit={this.handleSubmit}>
-                 <label>Rating:</label>
-                 <input type="text" name="rating" 
-                    value={this.state.rating} 
-                    onChange={this.handleChange}
-                     />
-                
-                 <br></br>
-                 <label>Description</label>
-                 <input type="text" 
-                    name="description" 
-                    value={this.state.description} 
-                    onChange={this.handleChange}/>
-                    <input type="submit" />
-             </form>
+                <div className="container">
+                <div className="row">
+                    <div className="col-md-8 m-auto">
+                    <h1 className="display-4 text-center">GAMER</h1>
+                    <p className="lead text-center">Enter the rating of the game</p>
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="form-group">
+                        <input type="number" 
+                            className="form-control form-control-lg" 
+                            placeholder="Rating" 
+                            name="rating" 
+                            value={this.state.rating}
+                            onChange={this.handleChange} />
+                        </div>
+                        <div className="form-group">
+                        <input type="text" 
+                            className="form-control form-control-lg" 
+                            placeholder="Description" 
+                            name="description"
+                            value={this.state.description}
+                            onChange={this.handleChange}
+                            />
+                        </div>
+                        <input type="submit" className="btn btn-info btn-block mt-4" />
+                    </form>
+                    </div>
+                </div>
+            </div>
             </div>
         )
     }

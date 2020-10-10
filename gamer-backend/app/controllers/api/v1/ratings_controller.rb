@@ -12,7 +12,7 @@ class Api::V1::RatingsController < ApplicationController
     end
 
     def create
-        @rating = @game.ratings.create(number: params[:rating], description: params[:description])
+        @rating = @game.ratings.new(number: params[:rating], description: params[:description])
         @rating.save
         render json: @game
         #create method to update rating

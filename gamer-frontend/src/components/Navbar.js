@@ -20,7 +20,7 @@ const Navbar = () => {
 
                     <ul className="navbar-nav ml-auto">
                     <li className="nav-item">
-                    <Link className="nav-link" to="games/new">Add Game</Link>
+                    <Link className="nav-link" to="/games/new">Add Game</Link>
                     </li>
                     </ul>
                 </div>

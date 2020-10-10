@@ -1,4 +1,4 @@
-export const deleteGame = (ratingID, gameID ) => dispatch => {
+export const deleteRating = (ratingID, gameID ) => dispatch => {
 
     fetch(`http://localhost:4000/api/v1/games/${gameID}/ratings/${ratingID}`, {
         method: 'DELETE'

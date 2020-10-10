@@ -4,6 +4,7 @@ import GamesContainer from './containers/GamesContainer';
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Landing from './components/Landing';
+import NotFound from './components/NotFound'
 import { BrowserRouter as Router, Route, } from 'react-router-dom';
 
 class App extends React.Component{
