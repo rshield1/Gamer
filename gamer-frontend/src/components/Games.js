@@ -6,9 +6,8 @@ const Games = (props) => {
     return (
         //render each account
         <div>
-        
             {props.games.map(game => 
-                <h4 key={game.id}><Link to={`/games/${game.id}`}>{game.name}</Link></h4>)}
+                <h4 key={game.id}><Link to={`/games/${game.id}`}>{game.name}</Link> - ${game.price}</h4>)}
         </div>
     )
 }
