@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css';
 import GamesContainer from './containers/GamesContainer';
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Landing from './components/Landing';
+import { BrowserRouter as Router, Route, } from 'react-router-dom';
 
 class App extends React.Component{
 
@@ -10,9 +14,16 @@ class App extends React.Component{
 
   render(){
     return (
-      <div>
-      <GamesContainer />
-      </div>
+      <Router>
+        <div className="App">
+        <Navbar />
+        <Route exact path="/" component={Landing} />
+        <GamesContainer />
+        <Footer />
+        </div>
+
+      </Router>
+
     );
 
   }

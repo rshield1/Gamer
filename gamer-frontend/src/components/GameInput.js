@@ -22,6 +22,7 @@ class GameInput extends Component {
     handleSubmit = (e) =>{
         e.preventDefault()
         this.props.addGame(this.state)
+        alert('Game Successfully Added')
         //reset state
         this.setState({
             name: '',

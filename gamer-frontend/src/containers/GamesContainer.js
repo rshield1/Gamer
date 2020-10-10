@@ -13,7 +13,7 @@ class GamesContainer extends Component {
     }
     render() {
         return (
-            <div>
+            <div className='gamescontainer'>
             <Switch>
                 <Route path='/games/new' component={ GameInput } />
                 <Route exact path='/games/:id'  render={(...routerProps) => <Game {...routerProps} games={this.props.games}/>} />

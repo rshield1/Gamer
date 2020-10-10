@@ -22,6 +22,7 @@ class RatingInput extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         this.props.addRating(this.state, this.props.game.id)
+        alert('Rating Successfully Added')
         this.setState({
             rating: '',
             description: ''
