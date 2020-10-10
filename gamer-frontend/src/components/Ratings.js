@@ -2,8 +2,11 @@ import React from 'react'
 
 const Ratings = (props) => {
     return (
+
         <div>
-            Ratings
+            {props.ratings && props.ratings.map(rating => 
+              <h4 key={rating.id}> - {rating.number} - {rating.description}</h4>  
+                )}
         </div>
     )
 }
