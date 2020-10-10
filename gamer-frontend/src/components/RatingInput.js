@@ -6,7 +6,7 @@ class RatingInput extends Component {
     constructor(){
         super()
             this.state = {
-            rating: 1,
+            rating: null,
             description: ''
             }
   
@@ -23,7 +23,7 @@ class RatingInput extends Component {
         e.preventDefault()
         this.props.addRating(this.state, this.props.game.id)
         this.setState({
-            rating: 1,
+            rating: null,
             description: ''
         })
     }
@@ -36,15 +36,11 @@ class RatingInput extends Component {
              <br></br>
              <form onSubmit={this.handleSubmit}>
                  <label>Rating:</label>
-                 <select name="rating" 
+                 <input type="text" name="rating" 
                     value={this.state.rating} 
-                    onChange={this.handleChange}>
-                     <option>1</option>
-                     <option>2</option>
-                     <option>3</option>
-                     <option>4</option>
-                     <option>5</option>
-                 </select>
+                    onChange={this.handleChange}
+                     />
+                
                  <br></br>
                  <label>Description</label>
                  <input type="text" 

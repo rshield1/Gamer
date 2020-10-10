@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2020_10_09_162620) do
 
   create_table "ratings", force: :cascade do |t|
     t.integer "game_id"
-    t.string "rating"
+    t.string "number"
     t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

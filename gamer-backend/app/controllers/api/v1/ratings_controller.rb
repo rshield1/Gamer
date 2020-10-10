@@ -12,7 +12,8 @@ class Api::V1::RatingsController < ApplicationController
     end
 
     def create
-        @rating = @game.ratings.new(rating_params)
+        binding.pry
+        @rating = @game.ratings.create(number: params[:rating], description: params[:description])
         @rating.save
         render json: @game
         #create method to update rating
@@ -30,6 +31,6 @@ class Api::V1::RatingsController < ApplicationController
     end
 
     def rating_params
-        params.require(:rating).permit(:game_id, :rating, :description)
+        params.require(:rating).permit(:game_id, :number, :description)
     end
 end
