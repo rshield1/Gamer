@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {connect} from 'react-redux'
 import { addRating } from '../actions/addRating'
 
+
 class RatingInput extends Component {
     constructor(){
         super()
@@ -11,8 +12,6 @@ class RatingInput extends Component {
             }
   
     }
-
-    
  
     handleChange = (e) => {
         e.preventDefault()

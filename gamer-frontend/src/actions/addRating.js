@@ -1,3 +1,4 @@
+
 export const addRating = (rating, gameID) => {
     return (dispatch) => {
         fetch(`http://localhost:4000/api/v1/games/${gameID}/ratings`, {
@@ -15,3 +16,4 @@ export const addRating = (rating, gameID) => {
         }))
     }
 }
+

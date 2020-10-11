@@ -8,15 +8,18 @@ const Ratings = (props) => {
     const handleDelete = (rating) => {
         props.deleteRating(rating.id, rating.game_id)
     }
+
+
     return (
-        <div className="card">
+        <div className="card bg-light mb-3">
             {props.ratings && props.ratings.map(rating => 
               <h4 key={rating.id}> {rating.number} 
-              <i class="fas fa-star"></i>'s 
-              <br></br>
-              {rating.description} 
-             <button onClick={() => handleDelete(rating)}>Delete</button>
-             </h4>)}
+              <i className="fas fa-star"></i>'s 
+              <br/>
+              <div className="card-text">
+               {rating.description}   
+              </div>
+             <button className="btn btn-danger" onClick={() => handleDelete(rating)}>Delete</button><hr/></h4>)}
         </div>
     )
 }

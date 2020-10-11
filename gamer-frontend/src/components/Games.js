@@ -2,9 +2,9 @@ import React from 'react'
 // import Game from './Game'
 import { Link } from 'react-router-dom'
 
+
+
 const Games = (props) => {
-
-
     return (
         //render each account
         //add a search component with a filter method

@@ -5,8 +5,20 @@ import { connect } from 'react-redux'
 import fetchGames from '../actions/fetchGames'
 import {Route, Switch} from 'react-router-dom'
 import Game from '../components/Game'
+import SearchBox from '../components/SearchBox';
 
 class GamesContainer extends Component {
+    constructor() {
+        super();
+        this.state = {
+            games: Games,
+            searchfield: ''
+        }
+    }
+
+    onSearchChange(e) {
+        console.log(e.target.value)
+    }
 
     componentDidMount() {
         this.props.fetchGames()
@@ -14,6 +26,7 @@ class GamesContainer extends Component {
     render() {
         return (
             <div className='gamescontainer'>
+            <SearchBox onSearchChange={this.onSearchChange} />
             <Switch>
                 <Route path='/games/new' component={ GameInput } />
                 <Route exact path='/games/:id'  render={(...routerProps) => <Game {...routerProps} games={this.props.games}/>} />

@@ -8,6 +8,7 @@ class RatingsContainer extends Component {
         return (
             <div>
                 <RatingInput game={this.props.game} />
+                <hr/>
                 <Ratings ratings={this.props.game && this.props.game.ratings} />
             </div>
         )
