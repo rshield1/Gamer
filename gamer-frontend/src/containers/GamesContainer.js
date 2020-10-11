@@ -11,7 +11,7 @@ class GamesContainer extends Component {
     constructor() {
         super();
         this.state = {
-            gamesArray: '',
+            gamesArray: [],
             searchfield: ''
         }
     }
