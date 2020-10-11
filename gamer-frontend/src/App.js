@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Landing from './components/Landing';
 // import NotFound from './components/NotFound'
-import { BrowserRouter as Router, Route, } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class App extends React.Component{
 
@@ -19,14 +19,16 @@ class App extends React.Component{
           <Router>
             <div className="App">
               <Navbar />
-              <Route exact path="/" component={Landing} />
+              <Switch>
+                 <Route exact path="/" component={Landing} />
+              </Switch>
+              <Switch>
               {/* <Route exact path="/games" component={GamesContainer} /> */}
+              </Switch>
               <GamesContainer />
               <Footer />
             </div>
-
         </Router>
-        
       </div>
     
     );
