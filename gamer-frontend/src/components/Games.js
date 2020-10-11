@@ -1,6 +1,6 @@
 import React from 'react'
 // import Game from './Game'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Games = (props) => {
 
@@ -8,8 +8,8 @@ const Games = (props) => {
     return (
         //render each account
         //add a search component with a filter method
-        <div>
-        <h1>Gamer Games</h1>
+        <div className="container">
+        <h1><i className="fas fa-gamepad"></i>Gamer Games</h1>
             <hr/>
             <div className="main">
                 {props.games.map(game =>  

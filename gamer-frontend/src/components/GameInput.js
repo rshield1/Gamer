@@ -39,7 +39,7 @@ class GameInput extends Component {
               <div className="container">
               <div className="row">
                   <div className="col-md-8 m-auto">
-                  <h1 className="display-4 text-center">GAMER</h1>
+                  <h1 className="display-4 text-center"><i className="fas fa-gamepad"></i> GAMER</h1>
                   <p className="lead text-center">Enter the rating of the game</p>
                   <form onSubmit={this.handleSubmit}>
                       <div className="form-group">
