@@ -11,17 +11,24 @@ class GamesContainer extends Component {
     constructor() {
         super();
         this.state = {
-            games: Games,
+            gamesArray: '',
             searchfield: ''
         }
     }
 
     onSearchChange(e) {
         console.log(e.target.value)
+        const filteredGames = this.props.games.filter(game => {
+            return game.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        })
     }
 
     componentDidMount() {
         this.props.fetchGames()
+        this.setState({
+            gamesArray: this.props.games,
+            searchfield: ''
+        })
     }
     render() {
         return (
@@ -39,9 +46,9 @@ class GamesContainer extends Component {
 }
 
 //   //i want access to this part of the store
-const mapStateToProps = (state) => ({
-    games: state.games
-})
+const mapStateToProps = (state) => {
+    return {games: state.games}
+}
 
 
 export default connect(mapStateToProps, { fetchGames })(GamesContainer)

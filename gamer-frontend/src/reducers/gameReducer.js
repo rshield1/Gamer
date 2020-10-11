@@ -5,9 +5,8 @@
 
 export default function gameReducer(state = {games: []}, action) {
   switch (action.type) {
-
       case 'FETCH_GAMES':
-          return {
+          return { 
               //this will return a brand new state
             games: action.payload
           }
