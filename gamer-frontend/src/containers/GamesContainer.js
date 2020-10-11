@@ -16,28 +16,27 @@ class GamesContainer extends Component {
         }
     }
 
-    onSearchChange(e) {
-        console.log(e.target.value)
-        const filteredGames = this.props.games.filter(game => {
-            return game.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+    onSearchChange = (e) => {
+         this.setState({
+            gamesArray: this.props.games,
+            searchfield: e.target.value
         })
     }
 
     componentDidMount() {
-        this.props.fetchGames()
-        this.setState({
-            gamesArray: this.props.games,
-            searchfield: ''
-        })
+        this.props.fetchGames()   
     }
     render() {
+        const filteredGames = this.props.games.filter(game => {
+            return game.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        })
         return (
             <div className='gamescontainer'>
             <SearchBox onSearchChange={this.onSearchChange} />
             <Switch>
                 <Route path='/games/new' component={ GameInput } />
                 <Route exact path='/games/:id'  render={(...routerProps) => <Game {...routerProps} games={this.props.games}/>} />
-                <Route exact path='/games' render={(...routerProps) => <Games {...routerProps} games={this.props.games}/>} />
+                <Route exact path='/games' render={(...routerProps) => <Games {...routerProps} games={filteredGames}/>} />
             </Switch>
             
             </div>

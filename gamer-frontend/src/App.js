@@ -23,9 +23,9 @@ class App extends React.Component{
                  <Route exact path="/" component={Landing} />
               </Switch>
               <Switch>
-              {/* <Route exact path="/games" component={GamesContainer} /> */}
-              </Switch>
               <GamesContainer />
+              {/* <Route exact path="/games" component={GamesContainer} /> */}
+              </Switch>     
               <Footer />
             </div>
         </Router>

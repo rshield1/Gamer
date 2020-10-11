@@ -45,13 +45,15 @@ class RatingInput extends Component {
                         <div className="form-group">
                         <input type="number" 
                             className="form-control form-control-lg" 
-                            placeholder="Rating" 
+                            placeholder="Rating Between 1 - 10"
+                            min="1"
+                            max="10" 
                             name="rating" 
                             value={this.state.rating}
                             onChange={this.handleChange} />
                         </div>
                         <div className="form-group">
-                        <input type="text" 
+                        <textarea 
                             className="form-control form-control-lg" 
                             placeholder="Description" 
                             name="description"
