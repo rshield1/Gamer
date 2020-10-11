@@ -2,6 +2,7 @@ import React from 'react'
 
 
 const SearchBox = ({onSearchChange}) => {
+
     return (
         <div className="container">
                 <br/>
@@ -11,7 +12,7 @@ const SearchBox = ({onSearchChange}) => {
                 placeholder='Search games.. example type "Devil May Cry"'
                 name="search"
                 onChange={onSearchChange}                
-            /> 
+            />
         </div>  
     )
 }
