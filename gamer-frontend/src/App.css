@@ -27,6 +27,10 @@
 .App-link {
   color: #61dafb;
 }
+.color-text {
+  color: rgb(6, 207, 207);
+  opacity: 0.9;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -72,6 +76,10 @@ img {
 }
 .landing-inner {
   padding-top: 80px;
+}
+
+.opacity {
+  opacity: .8;
 }
 
 .dark-overlay {

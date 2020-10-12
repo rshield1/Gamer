@@ -34,7 +34,7 @@ class RatingInput extends Component {
 
     render() {
         return (
-            <div>
+            <div className='container color-text'>
              <h5>Rating Input - Add a new Rating!!</h5>
                 <div className="container">
                 <div className="row">

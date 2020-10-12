@@ -29,7 +29,7 @@ export default function gameReducer(state = {games: []}, action) {
               return {...state, games: games}
             case 'DELETE_RATING':
               let gamestwo = state.games.map(game => {
-                if (game.id === action.payload.id) {
+                if (game.id === action.payload.id ) {
                   return action.payload
                 } else {
                   return game

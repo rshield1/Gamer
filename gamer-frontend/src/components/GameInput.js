@@ -34,13 +34,13 @@ class GameInput extends Component {
     render() {
         return (
             //rating game id number description
-            <div>
-            Add a new Game!!
+            <div className="container text-info">
+            <h2>Add a new Game!!</h2>
               <div className="container">
               <div className="row">
                   <div className="col-md-8 m-auto">
                   <h1 className="display-4 text-center"><i className="fas fa-gamepad"></i> GAMER</h1>
-                  <p className="lead text-center">Enter the rating of the game</p>
+                  <h2 className="text-center text-primary">Enter the name of the game</h2>
                   <form onSubmit={this.handleSubmit}>
                       <div className="form-group">
                       <input type="text" 
@@ -61,6 +61,7 @@ class GameInput extends Component {
                       </div>
                       <input type="submit" className="btn btn-info btn-block mt-4" />
                   </form>
+                  <br/>
                   </div>
               </div>
           </div>

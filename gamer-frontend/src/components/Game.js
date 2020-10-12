@@ -7,9 +7,9 @@ const Game = (props) => {
     let game = props.games[props[0].match.params.id - 1]
     return (
         <div>
-       <h2>
+       <h1 className="container text-primary">
         {game ? game.name : null} - {game ? game.price : null}
-        </h2>
+        </h1>
         <RatingsContainer game={game}/>
 
         </div>
