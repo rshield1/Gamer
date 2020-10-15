@@ -8,7 +8,7 @@ const SearchBox = ({onSearchChange}) => {
                 <br/>
         <label><h4>Search</h4></label>
             <input type='text'
-                className="form-control text-center"
+                className="form-control text-center input"
                 placeholder='Search games.. example type "Devil May Cry"'
                 name="search"
                 onChange={onSearchChange}                

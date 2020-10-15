@@ -82,6 +82,35 @@ img {
   opacity: .8;
 }
 
+.label {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: gray
+}
+.card {
+  padding: 2rem 4rem;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+  margin-bottom: 2rem;
+  background-color: rgba(4, 5, 5, 0.644);
+}
+
+.card--image {
+  margin: 0 auto;
+  display: block
+}
+
+.input {
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  line-height: 2.8rem;
+  border-radius: 20px;
+  border: 1px solid rgb(11, 142, 194);
+  margin-bottom: 1rem;
+}
+
 .dark-overlay {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;

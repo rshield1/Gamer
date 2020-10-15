@@ -34,7 +34,7 @@ class GameInput extends Component {
     render() {
         return (
             //rating game id number description
-            <div className="container text-info">
+            <div className="container text-info card">
             <h2>Add a new Game!!</h2>
               <div className="container">
               <div className="row">
