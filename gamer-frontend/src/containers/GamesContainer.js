@@ -24,7 +24,9 @@ class GamesContainer extends Component {
     }
 
     componentDidMount() {
+        console.log('a')
         this.props.fetchGames()   
+        console.log('b')
     }
     render() {
         const filteredGames = this.props.games.filter(game => {

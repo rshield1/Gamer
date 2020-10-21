@@ -50,7 +50,8 @@ class RatingInput extends Component {
                             max="10" 
                             name="rating" 
                             value={this.state.rating}
-                            onChange={this.handleChange} />
+                            onChange={this.handleChange}
+                            required />
                         </div>
                         <div className="form-group">
                         <textarea 
@@ -59,6 +60,7 @@ class RatingInput extends Component {
                             name="description"
                             value={this.state.description}
                             onChange={this.handleChange}
+                            required
                             />
                         </div>
                         <input type="submit" className="btn btn-info btn-block mt-4" />

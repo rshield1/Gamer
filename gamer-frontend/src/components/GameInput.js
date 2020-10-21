@@ -28,6 +28,8 @@ class GameInput extends Component {
             name: '',
             price: ''
         })
+        console.log(this)
+        
 
     }
 
@@ -48,7 +50,8 @@ class GameInput extends Component {
                           placeholder="Name of Game" 
                           name="name" 
                           value={this.state.name}
-                          onChange={this.handleChange} />
+                          onChange={this.handleChange}
+                          required />
                       </div>
                       <div className="form-group">
                       <input type="price" 
@@ -57,6 +60,7 @@ class GameInput extends Component {
                           name="price"
                           value={this.state.price}
                           onChange={this.handleChange}
+                          required
                           />
                       </div>
                       <input type="submit" className="btn btn-info btn-block mt-4" />

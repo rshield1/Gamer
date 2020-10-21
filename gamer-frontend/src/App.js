@@ -8,11 +8,7 @@ import Landing from './components/Landing';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 class App extends React.Component{
-
-  componentDidMount() {
-    
-  }
-
+  
   render(){
     return (
       <div>
@@ -24,7 +20,6 @@ class App extends React.Component{
               </Switch>
               <Switch>
               <GamesContainer />
-              {/* <Route exact path="/games" component={GamesContainer} /> */}
               </Switch>     
               <Footer />
             </div>
